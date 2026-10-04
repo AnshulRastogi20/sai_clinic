@@ -41,7 +41,7 @@ export const DOCTORS: Doctor[] = [
     role: "Senior Physician",
     designation: "Senior Physician & Hospital Management Expert",
     qualifications: ["MBBS", "M.Phil.", "MBA"],
-    experience: "22+ years",
+    experience: "25+ years",
     phone: "9501324120",
     photo: "/photos/f924ded8-d730-4db3-b771-57324a6d700c.png",
     bio: [

@@ -10,26 +10,16 @@ export const WhatsAppIcon = (props: SVGProps<SVGSVGElement>) => (
 );
 
 export const Wordmark = ({ light = false }: { light?: boolean }) => (
-  <span className="flex items-center gap-3">
+  <span className="flex items-center gap-2">
     <img
       src={LOGO_SRC}
-      alt="Sai Clinic logo"
-      width={44}
-      height={44}
-      className="h-11 w-11 rounded-lg"
+      alt="Sai Clinic Logo"
+      width={48}
+      height={48}
+      className="h-10 w-10 sm:h-12 sm:w-12"
     />
-    <span className="leading-none">
-      <span className={"block font-display text-xl font-medium " + (light ? "text-cream" : "text-ink")}>
-        Sai Clinic
-      </span>
-      <span
-        className={
-          "mt-1 block text-[0.62rem] font-bold uppercase tracking-[0.2em] " +
-          (light ? "text-cream/55" : "text-ink/45")
-        }
-      >
-        Rajendra Nagar
-      </span>
+    <span className={"font-display text-lg font-semibold sm:text-xl " + (light ? "text-cream" : "text-ink")}>
+      Sai Clinic
     </span>
   </span>
 );

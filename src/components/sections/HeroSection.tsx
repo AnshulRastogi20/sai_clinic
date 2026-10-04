@@ -5,7 +5,7 @@ const [vipin, lalita] = DOCTORS;
 
 const STATS = [
   { value: `Since ${CLINIC.since}`, label: "Caring for local families" },
-  { value: "42+ years", label: "Combined clinical experience" },
+  { value: "45+ years", label: "Combined clinical experience" },
   { value: "12 services", label: "Under one roof" },
   { value: "2 specialists", label: "Physician & gynaecologist" },
 ];
