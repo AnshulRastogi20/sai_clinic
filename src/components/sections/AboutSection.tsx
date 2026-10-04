@@ -1,45 +1,69 @@
-
-import SectionTitle from "@/components/SectionTitle";
-import { Card } from "@/components/ui/card";
+import { ArrowUpRight, MapPin } from "lucide-react";
+import Reveal from "@/components/Reveal";
+import { CLINIC } from "@/lib/clinic";
 
 const AboutSection = () => {
   return (
-    <section className="bg-gradient-to-br from-green/5 via-white to-saffron/5">
-      <div className="container mx-auto px-4">
-        <SectionTitle 
-          title="About Sai Clinic" 
-          subtitle="Our journey of serving the community with dedication and excellence"
-        />
-        
-        <Card className="p-8 border-t-4 border-t-saffron shadow-lg">
-          <div className="prose max-w-none text-gray-700 leading-relaxed">
-            <p className="text-lg mb-6">
-              We are pleased to inform you that after 15 years of serving the community of Shalimar Garden 
-              (B65, SG Ext II) from 2000 to 2015 with unwavering passion and dedication—especially during a 
-              time when no medical services were available—our center has now relocated to Rajender Nagar 
-              Sector-2 Sahibabad Ghaziabad.
+    <section id="about" className="bg-white py-20 sm:py-28">
+      <div className="container grid gap-12 lg:grid-cols-[1.25fr_1fr] lg:gap-20">
+        <Reveal>
+          <span className="eyebrow">Our story</span>
+          <h2 className="section-title mt-5">
+            Fifteen years in Shalimar Garden. <em className="font-normal text-clay">A new home</em> in Rajendra Nagar.
+          </h2>
+          <div className="mt-8 space-y-5 text-[1.05rem] leading-relaxed text-ink/70">
+            <p>
+              From 2000 to 2015 we served the community of Shalimar Garden ({CLINIC.previousAddress}) with
+              unwavering passion and dedication, at a time when no other medical services were available
+              nearby.
             </p>
-            
-            <p className="text-lg mb-6">
-              This move marks a new chapter in our journey, allowing us to expand our services and continue 
-              our commitment to holistic, accessible healthcare.
+            <p>
+              Our clinic has now relocated to Rajendra Nagar, Sector 2, Sahibabad, Ghaziabad. The move marks
+              a new chapter: a facility with a wider range of preventive and curative care, and the same
+              commitment to holistic, accessible healthcare.
             </p>
-            
-            <p className="text-lg mb-6">
-              Our new facility offers a wider range of medical services, preventive and curative healthcare.
-            </p>
-            
-            <p className="text-lg mb-6">
-              We extend our heartfelt gratitude to the Shalimar Garden community for their trust and support 
-              over the past decade, and we look forward to serving you with enhanced care at our new Rajendra 
-              Nagar Sahibabad location.
-            </p>
-            
-            <p className="text-lg font-semibold text-saffron">
-              Thank you for being a part of our journey.
+            <p>
+              We are grateful to the Shalimar Garden community for fifteen years of trust and support, and we
+              look forward to serving you with enhanced care at our new location.
             </p>
           </div>
-        </Card>
+          <p className="mt-8 font-display text-xl italic text-forest">
+            Thank you for being a part of our journey.
+          </p>
+        </Reveal>
+
+        <Reveal delay={120} className="lg:pt-12">
+          <div className="relative overflow-hidden rounded-[1.75rem] bg-forest p-8 text-cream shadow-lift sm:p-10">
+            <div aria-hidden className="absolute -right-16 -top-16 h-56 w-56 rounded-full border border-cream/10" />
+            <div aria-hidden className="absolute -right-4 -top-4 h-32 w-32 rounded-full border border-cream/10" />
+
+            <span className="text-[0.7rem] font-bold uppercase tracking-[0.22em] text-cream/60">We've moved</span>
+
+            <div className="mt-7 space-y-6">
+              <div className="opacity-60">
+                <span className="text-xs font-semibold uppercase tracking-wider">Earlier</span>
+                <p className="mt-1 font-display text-lg line-through decoration-cream/40">Shalimar Garden, 2000 - 2015</p>
+              </div>
+              <div>
+                <span className="text-xs font-semibold uppercase tracking-wider text-clay-soft">Now</span>
+                <address className="mt-1 not-italic">
+                  <span className="block font-display text-2xl leading-snug sm:text-[1.7rem]">{CLINIC.address.line1}</span>
+                  <span className="block font-display text-2xl leading-snug sm:text-[1.7rem]">{CLINIC.address.line2}</span>
+                  <span className="mt-1 block text-cream/70">{CLINIC.address.city}</span>
+                </address>
+              </div>
+            </div>
+
+            <a
+              href={CLINIC.mapsUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="btn mt-9 bg-cream text-forest hover:bg-white"
+            >
+              <MapPin size={17} /> Get directions <ArrowUpRight size={16} />
+            </a>
+          </div>
+        </Reveal>
       </div>
     </section>
   );

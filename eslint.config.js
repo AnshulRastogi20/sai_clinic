@@ -25,5 +25,10 @@ export default tseslint.config(
       ],
       "@typescript-eslint/no-unused-vars": "off",
     },
+  },
+  {
+    // shadcn primitives export variants alongside components by design
+    files: ["src/components/ui/**"],
+    rules: { "react-refresh/only-export-components": "off" },
   }
 );

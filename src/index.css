@@ -1,39 +1,38 @@
-
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
 @layer base {
   :root {
-    --background: 0 0% 100%;
-    --foreground: 222.2 84% 4.9%;
+    --background: 36 60% 97%;
+    --foreground: 153 20% 12%;
 
     --card: 0 0% 100%;
-    --card-foreground: 222.2 84% 4.9%;
+    --card-foreground: 153 20% 12%;
 
     --popover: 0 0% 100%;
-    --popover-foreground: 222.2 84% 4.9%;
+    --popover-foreground: 153 20% 12%;
 
-    --primary: 209 100% 47%;
-    --primary-foreground: 210 40% 98%;
+    --primary: 161 42% 20%;
+    --primary-foreground: 36 60% 97%;
 
-    --secondary: 187 75% 41%;
-    --secondary-foreground: 222.2 47.4% 11.2%;
+    --secondary: 34 40% 91%;
+    --secondary-foreground: 153 20% 12%;
 
-    --muted: 210 40% 96.1%;
-    --muted-foreground: 215.4 16.3% 46.9%;
+    --muted: 34 40% 93%;
+    --muted-foreground: 150 7% 38%;
 
-    --accent: 210 40% 96.1%;
-    --accent-foreground: 222.2 47.4% 11.2%;
+    --accent: 34 40% 91%;
+    --accent-foreground: 153 20% 12%;
 
-    --destructive: 0 84.2% 60.2%;
-    --destructive-foreground: 210 40% 98%;
+    --destructive: 0 72% 45%;
+    --destructive-foreground: 0 0% 100%;
 
-    --border: 214.3 31.8% 91.4%;
-    --input: 214.3 31.8% 91.4%;
-    --ring: 222.2 84% 4.9%;
+    --border: 34 24% 85%;
+    --input: 34 24% 82%;
+    --ring: 161 42% 20%;
 
-    --radius: 0.5rem;
+    --radius: 0.875rem;
 
     --sidebar-background: 0 0% 98%;
     --sidebar-foreground: 240 5.3% 26.1%;
@@ -45,119 +44,94 @@
     --sidebar-ring: 217.2 91.2% 59.8%;
   }
 
-  .dark {
-    --background: 222.2 84% 4.9%;
-    --foreground: 210 40% 98%;
-
-    --card: 222.2 84% 4.9%;
-    --card-foreground: 210 40% 98%;
-
-    --popover: 222.2 84% 4.9%;
-    --popover-foreground: 210 40% 98%;
-
-    --primary: 210 40% 98%;
-    --primary-foreground: 222.2 47.4% 11.2%;
-
-    --secondary: 217.2 32.6% 17.5%;
-    --secondary-foreground: 210 40% 98%;
-
-    --muted: 217.2 32.6% 17.5%;
-    --muted-foreground: 215 20.2% 65.1%;
-
-    --accent: 217.2 32.6% 17.5%;
-    --accent-foreground: 210 40% 98%;
-
-    --destructive: 0 62.8% 30.6%;
-    --destructive-foreground: 210 40% 98%;
-
-    --border: 217.2 32.6% 17.5%;
-    --input: 217.2 32.6% 17.5%;
-    --ring: 212.7 26.8% 83.9%;
-    --sidebar-background: 240 5.9% 10%;
-    --sidebar-foreground: 240 4.8% 95.9%;
-    --sidebar-primary: 224.3 76.3% 48%;
-    --sidebar-primary-foreground: 0 0% 100%;
-    --sidebar-accent: 240 3.7% 15.9%;
-    --sidebar-accent-foreground: 240 4.8% 95.9%;
-    --sidebar-border: 240 3.7% 15.9%;
-    --sidebar-ring: 217.2 91.2% 59.8%;
-  }
-}
-
-@layer base {
   * {
     @apply border-border;
   }
 
+  html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 5.5rem;
+    -webkit-text-size-adjust: 100%;
+  }
+
   body {
-    @apply bg-background text-foreground font-nunito;
+    @apply bg-background font-sans text-foreground antialiased;
+    font-feature-settings: "ss01";
   }
-  
-  h1, h2, h3, h4, h5, h6 {
-    @apply font-nunito font-bold;
+
+  h1, h2, h3, h4 {
+    @apply font-display tracking-tight;
+    font-variation-settings: "SOFT" 50, "WONK" 0;
   }
-  
-  section {
-    @apply py-12 md:py-16;
-  }
-  
-  .container {
-    @apply px-4 md:px-6;
+
+  ::selection {
+    @apply bg-clay/20 text-ink;
   }
 }
 
-.text-shadow {
-  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
-}
+@layer components {
+  .btn {
+    @apply inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-full px-6 py-3 text-sm font-semibold transition-all duration-200 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-forest focus-visible:ring-offset-2 focus-visible:ring-offset-cream disabled:pointer-events-none disabled:opacity-60;
+  }
+  .btn-primary {
+    @apply btn bg-forest text-cream shadow-[0_10px_24px_-12px_rgba(19,51,42,0.7)] hover:-translate-y-0.5 hover:bg-forest-deep;
+  }
+  .btn-outline {
+    @apply btn border border-ink/15 bg-white/60 text-ink backdrop-blur hover:border-ink/30 hover:bg-white;
+  }
+  .btn-whatsapp {
+    @apply btn bg-[#1FAF54] text-white hover:bg-[#178F44];
+  }
 
-/* Indian flag colors */ 
-.text-saffron {
-  color: #FF9933;
-}
+  .eyebrow {
+    @apply inline-flex items-center gap-3 text-[0.72rem] font-bold uppercase tracking-[0.22em] text-clay;
+  }
+  .eyebrow::before {
+    content: "";
+    @apply block h-px w-8 bg-clay/60;
+  }
 
-.bg-saffron {
-  background-color: #FF9933;
-}
+  .section-title {
+    @apply font-display text-[2.1rem] font-medium leading-[1.08] text-ink sm:text-5xl;
+  }
+  .section-lead {
+    @apply mt-4 max-w-2xl text-base leading-relaxed text-ink/65 sm:text-lg;
+  }
 
-.text-green {
-  color: #138808;
-}
+  .field {
+    @apply block w-full rounded-xl border border-input bg-cream/60 px-4 py-3 text-[0.95rem] text-ink outline-none transition placeholder:text-ink/35 focus:border-forest focus:bg-white focus:ring-4 focus:ring-forest/10;
+  }
+  .field-label {
+    @apply mb-1.5 block text-sm font-semibold text-ink/80;
+  }
 
-.bg-green {
-  background-color: #138808;
-}
-
-.border-saffron {
-  border-color: #FF9933;
-}
-
-.border-green {
-  border-color: #138808;
-}
-
-.hover-saffron:hover {
-  color: #FF9933;
-}
-
-.hover-green:hover {
-  color: #138808;
-}
-
-/* Responsive utilities */
-@media (max-width: 640px) {
-  .container {
-    padding-left: 1rem;
-    padding-right: 1rem;
+  .arch {
+    border-radius: 999px 999px 1.75rem 1.75rem;
   }
 }
 
-/* Making form elements more responsive */
-input, select, textarea {
-  @apply w-full max-w-full;
+/* Scroll reveal, driven by <Reveal>. Content stays visible without JS
+   or when the visitor prefers reduced motion. */
+.reveal {
+  opacity: 0;
+  transform: translateY(18px);
+  transition: opacity 0.8s cubic-bezier(0.22, 1, 0.36, 1), transform 0.8s cubic-bezier(0.22, 1, 0.36, 1);
+}
+.reveal.is-visible {
+  opacity: 1;
+  transform: none;
 }
 
-/* Whatsapp button styles to ensure they're visible */
-.whatsapp-btn {
-  background-color: #25D366 !important;
-  color: white !important;
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  .reveal, .animate-fade-up {
+    opacity: 1 !important;
+    transform: none !important;
+    transition: none !important;
+    animation: none !important;
+  }
+}
+
+.grain {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.05 0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
 }
