@@ -1,15 +1,15 @@
 {
   "redirects": [
     {
-      "source": "/:path*",
+      "source": "/(.*)",
       "has": [{ "type": "host", "value": "www.saiclinic.health" }],
-      "destination": "https://saiclinic.health/:path*",
+      "destination": "https://saiclinic.health/$1",
       "permanent": true
     },
     {
-      "source": "/:path*",
+      "source": "/(.*)",
       "has": [{ "type": "host", "value": "sai-clinic-indol.vercel.app" }],
-      "destination": "https://saiclinic.health/:path*",
+      "destination": "https://saiclinic.health/$1",
       "permanent": true
     }
   ],
