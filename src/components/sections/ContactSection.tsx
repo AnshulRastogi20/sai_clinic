@@ -23,7 +23,7 @@ const ContactSection = () => {
             </div>
             <div className="rounded-2xl border border-ink/10 bg-white px-5 py-3">
               <dt className="flex items-center gap-1.5 text-[0.68rem] font-bold uppercase tracking-[0.16em] text-ink/45">
-                <CalendarClock size={13} /> Daily slots
+                <CalendarClock size={13} /> Daily slot
               </dt>
               <dd className="mt-1 text-sm font-semibold leading-relaxed text-ink">
                 {CLINIC.booking.slots.join(" · ")}

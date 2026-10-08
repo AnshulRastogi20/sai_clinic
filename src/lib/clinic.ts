@@ -21,7 +21,7 @@ export const CLINIC = {
   booking: {
     url: "https://www.socioverse.io/b/saiclinic/sai-clinic",
     fee: "₹500",
-    slots: ["12:00 - 1:00 PM", "3:00 - 4:00 PM", "6:30 - 7:30 PM"],
+    slots: ["6:30 - 7:30 PM"],
   },
 } as const;
 
