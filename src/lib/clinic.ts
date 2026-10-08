@@ -16,6 +16,13 @@ export const CLINIC = {
     { days: "Monday to Friday", time: "6:00 PM - 8:00 PM" },
     { days: "Saturday & Sunday", time: "By appointment" },
   ],
+  // Online booking runs on Socioverse (page "saiclinic", product "sai-clinic").
+  // Public page, no API key needed in the browser.
+  booking: {
+    url: "https://www.socioverse.io/b/saiclinic/sai-clinic",
+    fee: "₹500",
+    slots: ["12:00 - 1:00 PM", "3:00 - 4:00 PM", "6:30 - 7:30 PM"],
+  },
 } as const;
 
 export type DoctorId = "vipin" | "lalita";

@@ -6,7 +6,7 @@ const LINKS = [
   { name: "Our doctors", href: "#doctors" },
   { name: "Services", href: "#services" },
   { name: "Notices", href: "#notices" },
-  { name: "Book appointment", href: "#contact" },
+  { name: "Book appointment", href: "#book" },
 ];
 
 const Footer = () => {

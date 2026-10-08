@@ -43,7 +43,7 @@ const HeroSection = () => {
           </p>
 
           <div className="mt-9 flex flex-col gap-3 sm:flex-row">
-            <a href="#contact" className="btn-primary px-7 py-3.5 text-[0.95rem]">
+            <a href="#book" className="btn-primary px-7 py-3.5 text-[0.95rem]">
               Book an appointment <ArrowRight size={18} />
             </a>
             <a href={telLink(PRIMARY_DOCTOR.phone)} className="btn-outline px-7 py-3.5 text-[0.95rem]">

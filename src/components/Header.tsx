@@ -46,7 +46,7 @@ const Header = () => {
               {link.name}
             </a>
           ))}
-          <a href="#contact" className="btn-primary px-5 py-2.5">
+          <a href="#book" className="btn-primary px-5 py-2.5">
             Book appointment
           </a>
         </nav>
@@ -76,7 +76,7 @@ const Header = () => {
               </a>
             ))}
           </div>
-          <a href="#contact" onClick={() => setOpen(false)} className="btn-primary mt-4 w-full">
+          <a href="#book" onClick={() => setOpen(false)} className="btn-primary mt-4 w-full">
             Book appointment
           </a>
         </nav>
