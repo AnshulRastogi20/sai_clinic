@@ -4,11 +4,11 @@ import { cn } from "@/lib/utils";
 import { Wordmark } from "@/components/icons";
 
 const NAV = [
-  { name: "About", href: "#about" },
-  { name: "Doctors", href: "#doctors" },
-  { name: "Services", href: "#services" },
-  { name: "Notices", href: "#notices" },
-  { name: "Contact", href: "#contact" },
+  { name: "About", href: "/#about" },
+  { name: "Doctors", href: "/#doctors" },
+  { name: "Services", href: "/#services" },
+  { name: "Notices", href: "/#notices" },
+  { name: "Contact", href: "/#contact" },
 ];
 
 const Header = () => {
@@ -32,7 +32,7 @@ const Header = () => {
       )}
     >
       <div className="container flex items-center justify-between">
-        <a href="#home" aria-label="Sai Clinic, back to top" onClick={() => setOpen(false)}>
+        <a href="/#home" aria-label="Sai Clinic, back to top" onClick={() => setOpen(false)}>
           <Wordmark />
         </a>
 
@@ -46,7 +46,7 @@ const Header = () => {
               {link.name}
             </a>
           ))}
-          <a href="#book" className="btn-primary px-5 py-2.5">
+          <a href="/#book" className="btn-primary px-5 py-2.5">
             Book appointment
           </a>
         </nav>
@@ -76,7 +76,7 @@ const Header = () => {
               </a>
             ))}
           </div>
-          <a href="#book" onClick={() => setOpen(false)} className="btn-primary mt-4 w-full">
+          <a href="/#book" onClick={() => setOpen(false)} className="btn-primary mt-4 w-full">
             Book appointment
           </a>
         </nav>

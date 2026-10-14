@@ -2,11 +2,12 @@ import { Wordmark } from "@/components/icons";
 import { CLINIC, DOCTORS, formatPhone, telLink } from "@/lib/clinic";
 
 const LINKS = [
-  { name: "About", href: "#about" },
-  { name: "Our doctors", href: "#doctors" },
-  { name: "Services", href: "#services" },
-  { name: "Notices", href: "#notices" },
-  { name: "Book appointment", href: "#book" },
+  { name: "About", href: "/#about" },
+  { name: "Our doctors", href: "/#doctors" },
+  { name: "Services", href: "/#services" },
+  { name: "Notices", href: "/#notices" },
+  { name: "Book appointment", href: "/#book" },
+  { name: "Privacy policy", href: "/privacy-policy" },
 ];
 
 const Footer = () => {
